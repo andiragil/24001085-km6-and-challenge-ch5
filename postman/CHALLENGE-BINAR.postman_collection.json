@@ -1,0 +1,511 @@
+{
+	"info": {
+		"_postman_id": "35731c38-1167-4ad7-827f-e6e496b47e18",
+		"name": "CHALLENGE-BINAR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33063195"
+	},
+	"item": [
+		{
+			"name": "chapter5",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "register member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "andiragilwicaksono@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "cobacoba",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "andiragilwicaksono",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/D:/FILE ANDI/AI/bing/_fa5b01c6-572a-4b4f-8863-3574d8b351a4.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/register",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "cobatiga@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "cobacoba",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "cobatiga",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/D:/FILE ANDI/KULIAH/MSIB/BINAR/challenge/chapter4/assets/colt.jpeg"
+										},
+										{
+											"key": "role",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/registerAdmin",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"registerAdmin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/auth/profile",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"cobasatu@gmail.com\",\r\n    \"password\": \"cobacoba\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/auth/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cars",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/cars/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"cars",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/cars/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"cars",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "kijang",
+											"type": "text"
+										},
+										{
+											"key": "detail_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "rentPerDay",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "size",
+											"value": "large",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/D:/FILE ANDI/KULIAH/MSIB/BINAR/challenge/chapter4/assets/ertiga.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/cars/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"cars",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "detail_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "rentPerDay",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "size",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/cars/6",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"cars",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/cars/1",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"cars",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "details",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/details/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"details",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/details/1",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"details",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/details",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/api/details/2",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"details",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/api/details/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"details",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
