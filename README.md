@@ -1,7 +1,7 @@
 <p>ERD untuk database</p>
 <img src="erd/binar challenge.png">
 
-<h5>akun superadmin untuk login</h5>
+<h1>akun superadmin untuk login</h1>
 <p>email : andiragilwicaksono@gmail.com</p>
 <p>password : cobacoba</p>
 
