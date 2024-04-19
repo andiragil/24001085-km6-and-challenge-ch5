@@ -11,6 +11,7 @@ app.use(express.static("public"));
 app.use(
     fileUpload({
         useTempFiles: true,
+        tempFileDir: process.env.NODE_ENV == "development" ? "./tmp" : "/tmp", //gcp tmp file
     })
 );
 app.use("/api", router);
