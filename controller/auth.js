@@ -7,7 +7,8 @@ exports.register = async (req, res, next) => {
         const { email, password, name } = req.body;
 
         // get the photo
-        const { photo } = req.files;
+        // const { photo } = req.files;
+        const photo = req?.files?.photo;
 
         if (email == "" || !email) {
             return next({
@@ -50,7 +51,8 @@ exports.registerAdmin = async (req, res, next) => {
         const { email, password, name, role } = req.body;
 
         // get the photo
-        const { photo } = req.files;
+        // const { photo } = req.files;
+        const photo = req?.files?.photo;
 
         if (email == "" || !email) {
             return next({
